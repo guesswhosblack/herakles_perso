@@ -1,0 +1,28 @@
+
+hk_platform_home:
+    path:      /{page}
+    defaults:  { _controller: HKPlatformBundle:Commande:index, page: 1 }
+    requirements:
+        page: \d+
+    
+hk_platform_view:
+    path:      /commande/{id}
+    defaults:  { _controller: HKPlatformBundle:Commande:view }
+    requirements:
+        id: \d+
+    
+hk_platform_add:
+    path:      /add
+    defaults:  { _controller: HKPlatformBundle:Commande:add }
+
+hk_platform_edit:
+    path:      /edit/{id}
+    defaults:  { _controller: HKPlatformBundle:Commande:edit }
+    requirements:
+        id: \d+
+
+hk_platform_delete:
+    path:      /delete/{id}
+    defaults:  { _controller: HKPlatformBundle:Commande:delete }
+    requirements:
+        id: \d+

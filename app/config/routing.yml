@@ -1,0 +1,5 @@
+hk_platform:
+    resource: "@HKPlatformBundle/Resources/config/routing.yml"
+    prefix:   /platform
+
+

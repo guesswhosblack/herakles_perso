@@ -1,0 +1,27 @@
+{# src/HK/PlatformBundle/Resources/views/Commande/index.html.twig #}
+
+{% extends "HKPlatformBundle::layout.html.twig" %}
+
+{% block title %}
+  Accueil - {{ parent() }}
+{% endblock %}
+
+{% block hkplatform_body %}
+
+  <h2>Liste des commandes</h2>
+
+  <ul>
+    {% for commande in listCommandes %}
+      <li>
+        <a href="{{ path('hk_platform_view', {'id': commande.id}) }}">
+          {{ commande.title }}
+        </a>
+        par {{ commande.author }},
+        le {{ commande.date|date('d/m/Y') }}
+      </li>
+    {% else %}
+      <li>Pas (encore !) de commandes</li>
+    {% endfor %}
+  </ul>
+
+{% endblock %}

@@ -1,0 +1,14 @@
+{# src/HK/PlatformBundle/Resources/views/Advert/menu.html.twig #}
+
+{# Ce template n'hérite de personne,
+   tout comme le template inclus avec {{ include() }}. #}
+
+<ul class="nav nav-pills nav-stacked">
+  {% for commande in listCommandes %}
+    <li>
+      <a href="{{ path('hk_platform_view', {'id': commande.id}) }}">
+        {{ commande.title }}
+      </a>
+    </li>
+  {% endfor %}
+</ul>
